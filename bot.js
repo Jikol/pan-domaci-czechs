@@ -11,4 +11,10 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if(message.content === 'ahoj') {
+    message.reply('ahoj');
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
