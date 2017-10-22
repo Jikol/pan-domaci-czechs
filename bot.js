@@ -12,8 +12,8 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if(message.content === 'ahoj') {
-    message.reply('ahoj');
+  if(message.content === 'aho') {
+    message.reply('ahojjjj');
   }
 });
 
