@@ -8,9 +8,10 @@ client.on('ready', () => {
 client.on('message', function(message) {
   if(message.content == ".clear") {
     if(message.member.hasPermission("MANAGE_MESSAGES")) {
-      message.channel.fetchMessages()
-        .then(function(list) {
-          message.channel.bulkDelete(list);  
+      let messagecount = parseInt(numberofmessages); 
+      message.channel.fetchMessages({limit: messagecount})
+        .then(function(messagecount) {
+          message.channel.bulkDelete(messagecount);  
         }, function(err) {
           message.channel.send("Nemáš práva mazat správy")
         })                                           
