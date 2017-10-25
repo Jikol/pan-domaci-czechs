@@ -5,19 +5,4 @@ client.on('ready', () => {
   console.log('Pripraven');
 });
 
-client.on('message', function(message) {
-  if(message.content == ".clear") {
-    if(message.member.hasPermission("MANAGE_MESSAGES")) {
-      let messagecount = parseInt(numberofmessages); 
-      message.channel.fetchMessages({limit: messagecount})
-        .then(messages => message.channel.bulkDelete(messages)); 
-         function(err) {
-          message.channel.send("Nemáš práva mazat správy")
-        }                                           
-    }
-  }
-});
-
-
-
 client.login(process.env.BOT_TOKEN);
