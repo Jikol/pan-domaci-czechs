@@ -10,11 +10,10 @@ client.on('message', function(message) {
     if(message.member.hasPermission("MANAGE_MESSAGES")) {
       let messagecount = parseInt(numberofmessages); 
       message.channel.fetchMessages({limit: messagecount})
-        .then(function(messagecount) {
-          message.channel.bulkDelete(messagecount);  
-        }, function(err) {
+        .then(messages => message.channel.bulkDelete(messages)); 
+         function(err) {
           message.channel.send("Nemáš práva mazat správy")
-        })                                           
+        }                                           
     }
   }
 });
