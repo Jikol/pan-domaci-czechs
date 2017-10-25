@@ -9,3 +9,4 @@ bot.on('message', (message) => {
 
 
 bot.login(process.env.BOT_TOKEN);
+bot.login("MzQ2NDE4NjMzNjg3MzAyMTQ2.DNJNSg.WOLWsxKMpfgBTUAiU5twI5xr6Lc");
