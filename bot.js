@@ -5,16 +5,18 @@ client.on('ready', () => {
   console.log('Pripraven');
 });
 
-client.on('message', message => {
-  if(message.content === 'Praise Joko!') {
-    message.reply('Joko wishes you thanks...');
+client.on('message', function(message) {
+  if(message.content == "^clear") {
+    if(message.member.hasPermission("MANAGE_MESSAGES")) {
+      message.channel.fetchMessages().then(function(list) {
+        message.channel.bulkDelete(list);  
+      }, function(err) {
+          message.channel.send("ERROR: ERROR CLEARING CHANNEL.")
+      })                                           
+    }
   }
 });
 
-client.on('message', message => {
-  if(message.content === 'aho') {
-    message.reply('ahojjjj');
-  }
-});
+
 
 client.login(process.env.BOT_TOKEN);
