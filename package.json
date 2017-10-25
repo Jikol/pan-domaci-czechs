@@ -1,5 +1,5 @@
 {
-  "name": "Pan_domaci",
+  "name": "pan_domaci",
   "description": "Bot for our discord server",
   "version": "0.0.0",
   "main": "bot.js",
@@ -7,7 +7,22 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "discord.js": "11.1.0",
+    "discord.js": "^11.1.0",
     "request": "2.81.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jikol/pan-domaci-czechs.git"
+  },
+  "keywords": [
+    "pan",
+    "domaci",
+    "czechs"
+  ],
+  "author": "Jikol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jikol/pan-domaci-czechs/issues"
+  },
+  "homepage": "https://github.com/Jikol/pan-domaci-czechs#readme"
 }
