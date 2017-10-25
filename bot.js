@@ -1,23 +1,10 @@
 const discord = require('discord.js');
-const client = new discord.Client();
+const bot = new discord.Client();
 
-client.on('ready', () => {
-  console.log('Pripraven');
-});
+bot.login(process.env.BOT_TOKEN);
 
-client.on('message', function(message) {
-  if(message.content == ".clear") {
-    if(message.member.hasPermission("MANAGE_MESSAGES")) {
-      let messagecount = parseInt(numberofmessages); 
-      message.channel.fetchMessages({limit: messagecount})
-        .then(messages => message.channel.bulkDelete(messages)); 
-         function(err) {
-          message.channel.send("Nemáš práva mazat správy")
-        }                                           
+client.on('message', (message) => {
+    if (message.content == '.test') {
+        message.channel.sendMessage('Funguju :)');
     }
-  }
 });
-
-
-
-client.login(process.env.BOT_TOKEN);
