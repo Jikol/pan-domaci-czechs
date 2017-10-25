@@ -3,7 +3,7 @@ const bot = new discord.Client();
 
 client.on('message', (message) => {
     if (message.content == '.test') {
-        message.channel.sendMessage('Funguju :)');
+        message.channel.sendMessage('Funguju');
     }
 });
 
