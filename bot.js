@@ -40,4 +40,4 @@ bot.on('message', (message) => {
 
 
 bot.login(TOKEN);
-bot.login(process.env.BOT_TOKEN);
+bot.login(proce.env.BOT_TOKEN);
