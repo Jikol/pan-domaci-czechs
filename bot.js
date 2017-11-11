@@ -38,5 +38,5 @@ bot.on('message', (message) => {
 
 });
 
-
+client.User.setGame('.help pro vypsání příkazů');
 bot.login(process.env.BOT_TOKEN);
