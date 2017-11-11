@@ -2,9 +2,7 @@ const discord = require('discord.js');
 const TOKEN = "";
 const PREFIX = ".";
 var bot = new discord.Client();
-var game = {name: "Test"};
-
-client.User.setGame(game);
+var game = {name: ".help pro příkazy"};
 
 bot.on('message', (message) => {
     console.log(message.content);
@@ -41,4 +39,5 @@ bot.on('message', (message) => {
 
 });
 
+bot.User.setGame(game);
 bot.login(process.env.BOT_TOKEN);
