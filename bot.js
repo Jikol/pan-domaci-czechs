@@ -39,5 +39,5 @@ bot.on('message', (message) => {
 
 });
 
-bot.User.setGame(game);
+bot.setGame(game);
 bot.login(process.env.BOT_TOKEN);
