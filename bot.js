@@ -5,7 +5,7 @@ var bot = new discord.Client();
 
 bot.on('ready', () => {
   console.log(message.content);  
-  bot.user.setGame("use !help");
+  bot.user.setGame("pouzij .help");
   console.log("Pripraven");  
 });
 
