@@ -2,8 +2,7 @@ const discord = require('discord.js');
 const PREFIX = "$";
 var bot = new discord.Client();
 
-bot.on('ready', () => {
-  console.log(message.content);  
+bot.on('ready', () => { 
   console.log("Pripraven");  
 });
 
