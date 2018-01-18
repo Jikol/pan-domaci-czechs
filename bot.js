@@ -64,5 +64,4 @@ bot.on('message', (message) => {
     }
 });
 
-bot.login(NODE_TOKEN);
 bot.login(process.env.HEROKU_TOKEN);
