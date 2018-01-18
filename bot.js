@@ -1,7 +1,6 @@
 const discord = require('discord.js');
 const PREFIX = ".";
 const PREFIX_LOOP = "/";
-const NODE_TOKEN = "MzQ2NDE4NjMzNjg3MzAyMTQ2.DUFSYQ.SPTeUVv1sExi7n4OTlc0tmqiee0";
 var bot = new discord.Client();
 var motd;
 var rmotd;
