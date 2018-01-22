@@ -32,9 +32,11 @@ bot.on('message', (message) => {
                 {
                     if(type[1].toLowerCase() === 'motd') {
                         motd = bot.setInterval(motdFunction, 86400000);
+                        message.channel.send("MOTD SPUŠTĚNO");
                     }
                     if(type[1].toLowerCase() === 'rmotd') {
                         rmotd = bot.setInterval(rmotdFunction, 86400000);
+                        message.channel.send("RMOTD SPUŠTĚNO");
                     }
                     break;
 
@@ -43,9 +45,11 @@ bot.on('message', (message) => {
                 {
                     if(type[1].toLowerCase() === 'motd') {
                         bot.clearInterval(motd);
+                        message.channel.send("MOTD ZASTAVENO");
                     }
                     if(type[1].toLowerCase() === 'rmotd') {
                         bot.clearInterval(rmotd);
+                        message.channel.send("RMOTD ZASTAVENO");
                     }
                     break;
                 }
