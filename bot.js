@@ -4,6 +4,7 @@ const PREFIX_LOOP = "/";
 var bot = new discord.Client();
 var motd;
 var rmotd;
+var testLoop;
 
 bot.on('ready', () => {
     console.log("Pripraven");
@@ -32,11 +33,12 @@ bot.on('message', (message) => {
                 {
                     if(type[1].toLowerCase() === 'motd') {
                         motd = bot.setInterval(motdFunction, 86400000);
-                        message.channel.send("MOTD SPUŠTĚNO");
                     }
                     if(type[1].toLowerCase() === 'rmotd') {
                         rmotd = bot.setInterval(rmotdFunction, 86400000);
-                        message.channel.send("RMOTD SPUŠTĚNO");
+                    }
+                    if(type[1].toLowerCase() === 'test') {
+                        testLoop = bot.setInterval(testFunction, 2500);
                     }
                     break;
 
@@ -45,11 +47,12 @@ bot.on('message', (message) => {
                 {
                     if(type[1].toLowerCase() === 'motd') {
                         bot.clearInterval(motd);
-                        message.channel.send("MOTD ZASTAVENO");
                     }
                     if(type[1].toLowerCase() === 'rmotd') {
                         bot.clearInterval(rmotd);
-                        message.channel.send("RMOTD ZASTAVENO");
+                    }
+                    if(type[1].toLowerCase() === 'test') {
+                        bot.clearInterval(testLoop);
                     }
                     break;
                 }
@@ -65,6 +68,11 @@ bot.on('message', (message) => {
     function rmotdFunction() {
         var channelID = "403266878912593920";
         bot.channels.get(channelID).send("☞ GUILDOVNÍ AKCE ☜   [RAIDY -> PÁTEK,SOBOTA 20:00]\n     °°°°°°°°°°°°°°°°°°\n Stálá parta\n Normal: 👿 1,2,3,4\n Tréning: 👿 5\n Pokud někdy chybí, je možnost jít za něj.\n Více ⓘ /w Drti nebo Dany");
+    }
+
+    function testFunction() {
+        var channelID = '406577835658969110';
+        bot.channels.get(channelID).send("TEST");
     }
 });
 
