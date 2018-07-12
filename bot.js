@@ -49,5 +49,4 @@ bot.on('message', (message) => {
     }
 });
 
-bot.login('MzQ2NDE4NjMzNjg3MzAyMTQ2.DijNLA.k8m_z6ojuHkovXzxaK3EEy2e8XQ');
-/*bot.login(process.env.HEROKU_TOKEN);*/
+bot.login(process.env.HEROKU_TOKEN);
