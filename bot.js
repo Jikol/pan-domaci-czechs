@@ -27,7 +27,11 @@ bot.on('message', (message) => {
                         message.delete();
 
                         if (!message.member.roles.find("name", "Zástupce")) {
-                            message.channel.send('Jenom zástupci mohou mazat zprávy!');
+                            var embed = new Discord.RichEmbed()
+                                .addField("Něco se pokazilo...", "Jenom zástupci mohou mazat zprávy!")
+                                .setColor(0x00ba25)
+                                .setFooter("Pro více info napiš .pomoc")
+                            message.channel.sendEmbed(embed);
                             return;
                         }
 
