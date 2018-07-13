@@ -51,11 +51,11 @@ bot.on('message', (message) => {
                         }
 
                         const fetched = await message.channel.fetchMessages({
-                            limit: zprava[1]
+                            limit: zprava[1] + 1
                         });
                         console.log(fetched.size + ' zprav bude smazano');
                         
-                        message.channel.bulkDelete(fetched + 1).catch(error => message.channel.send(`Error: ${error}`));
+                        message.channel.bulkDelete(fetched).catch(error => message.channel.send(`Error: ${error}`));
                     }
                     smazat();
                     break;
