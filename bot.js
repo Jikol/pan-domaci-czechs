@@ -34,7 +34,7 @@ bot.on('message', (message) => {
             case 'smaz':
                 {
                     async function smazat() {
-                        message.delete();
+                        
 
                         if (!message.member.roles.find("name", "Zástupce")) {
                             var embed = new discord.RichEmbed()
