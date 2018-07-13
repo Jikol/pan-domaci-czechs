@@ -50,8 +50,9 @@ bot.on('message', (message) => {
                             return;
                         }
 
+                        let pocet = zprava[1] + 1;
                         const fetched = await message.channel.fetchMessages({
-                            limit: zprava[1] + 1
+                            limit: pocet
                         });
                         console.log(fetched.size + ' zprav bude smazano');
                         
