@@ -54,6 +54,7 @@ bot.on('message', (message) => {
                         const fetched = await message.channel.fetchMessages({
                             limit: pocet
                         });
+                        message.channel.send(fetched);
                         console.log(fetched.size + ' zprav bude smazano');
                         
                         message.channel.bulkDelete(fetched).catch(error => message.channel.send(`Error: ${error}`));
