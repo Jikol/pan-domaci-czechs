@@ -34,7 +34,7 @@ bot.on('message', (message) => {
             case 'smaz':
                 {
                     async function smazat() {
-                        
+                        message.delete();
 
                         if (!message.member.roles.find("name", "Zástupce")) {
                             var embed = new discord.RichEmbed()
@@ -53,8 +53,9 @@ bot.on('message', (message) => {
                         const fetched = await message.channel.fetchMessages({
                             limit: zprava[1]
                         });
+                        fetched = fetched + 1;
                         console.log(fetched.size + ' zprav bude smazano');
-
+                        
                         message.channel.bulkDelete(fetched).catch(error => message.channel.send(`Error: ${error}`));
                     }
                     smazat();
